@@ -48,7 +48,7 @@ jobs:
             docker pull breldan/puppeteer-node
             docker stop puppeteer-node || true
             docker rm puppeteer-node || true
-            docker run -d --name puppeteer-node --network host -p 4000:4000 \
+            docker run -d --name puppeteer-node --network host -p 5000:5000 \
               --env-file /root/kippraportal/secrets \
               breldan/puppeteer-node
             docker image prune -a --force
